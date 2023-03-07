@@ -4,7 +4,7 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "Common": {
+      "GiftItems": {
         "$path": "src/shared"
       }
     },
@@ -12,6 +12,12 @@
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
+      }
+    },
+
+    "StarterGui": {
+      "menuScreen": {
+        "$path": "src/gui"
       }
     },
 
@@ -29,7 +35,12 @@
       },
       "EventModel": {
         "$path": "src/MainMap/EventMap.rbxm"
+      },
+
+      "ShopModel": {
+        "$path": "src/ShopMap/ShopMap.rbxm"
       }
+
     },
     "Lighting": {
       "$properties": {
