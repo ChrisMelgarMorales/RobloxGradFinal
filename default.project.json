@@ -29,7 +29,12 @@
       },
       "EventModel": {
         "$path": "src/MainMap/EventMap.rbxm"
+      },
+
+      "ShopModel": {
+        "$path": "src/ShopMap/ShopMap.rbxm"
       }
+
     },
     "Lighting": {
       "$properties": {
