@@ -15,6 +15,12 @@
       }
     },
 
+    "StarterGui": {
+      "menuScreen": {
+        "$path": "src/gui"
+      }
+    },
+
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
