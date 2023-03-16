@@ -20,7 +20,28 @@ if stringValue then
 	-- Print the array of numbers
 	print(table.concat(whitelistUserIDs, ", "))
 else
-    print("Could not find the StringValue instance!")
+    print("Could not find the whitelist.txt instance!")
+end
+
+-- Get a reference to the StringValue instance
+local stringValue = serverScript:FindFirstChild("admins")
+
+-- Check if the StringValue was found
+local adminUserIDs = {}
+if stringValue then
+    -- Access the value of the StringValue
+	local substrings = string.split(stringValue.Value, "\n")
+	
+	-- Convert each substring to a number and add it to an array
+	
+	for i, substring in ipairs(substrings) do
+		adminUserIDs[i] = tonumber(substring)
+	end
+	
+	-- Print the array of numbers
+	print(table.concat(adminUserIDs, ", "))
+else
+    print("Could not find the admins.txt instance!")
 end
 
 
@@ -33,4 +54,23 @@ Players.PlayerAdded:Connect(function(player)
 		player:Kick("You are not whitelisted on this server.")
 	end
 
+end)
+
+local Commands = require(script.HostControls)
+adminRank = 255
+
+game.Players.PlayerAdded:Connect(function(player)
+    player.Chatted:Connect(function(msg)
+        msg = string.lower(msg)
+        local split = string.split(msg, ' ')
+        local cmd  = split[1]
+        if cmd:sub(1, 1) ~= "!" then return end
+        if not table.find(adminUserIDs,player.UserId) then
+            game:GetService("Chat"):Chat(player, "You do not have permission to use this command.")
+            return
+        end
+        if Commands[cmd:sub(2,#cmd)] then 
+            Commands[cmd:sub(2,#cmd)](player, split)
+        end
+    end)
 end)
