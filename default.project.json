@@ -39,6 +39,10 @@
 
       "ShopModel": {
         "$path": "src/ShopMap/ShopMap.rbxm"
+      },
+
+      "EventSequence": {
+        "$path": "src/EventScene/EventSequence.rbxm"
       }
 
     },
