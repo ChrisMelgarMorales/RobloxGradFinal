@@ -27,6 +27,9 @@
       },
       "hatMenu": {
         "$path": "src/hats/hatMenu.rbxm"
+      }, 
+      "emoteScreen": {
+        "$path": "src/emotes"
       }
     },
 
