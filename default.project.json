@@ -6,18 +6,27 @@
     "ReplicatedStorage": {
       "GiftItems": {
         "$path": "src/shared"
+      },
+      "HatEvents": {
+        "$path": "src/hats/hatEvents.rbxm"
       }
     },
 
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
+      },
+      "hatServerScript": {
+        "$path": "src/hats/HatServerScript.rbxm"
       }
     },
 
     "StarterGui": {
       "menuScreen": {
         "$path": "src/gui"
+      },
+      "hatMenu": {
+        "$path": "src/hats/hatMenu.rbxm"
       }
     },
 
