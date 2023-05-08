@@ -18,6 +18,9 @@
     "StarterGui": {
       "menuScreen": {
         "$path": "src/gui"
+      }, 
+      "emoteScreen": {
+        "$path": "src/emotes"
       }
     },
 
