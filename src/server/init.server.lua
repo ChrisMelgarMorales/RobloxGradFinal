@@ -74,3 +74,13 @@ game.Players.PlayerAdded:Connect(function(player)
         end
     end)
 end)
+
+-- Create a new Sound object
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://1840142774"
+sound.Looped = true
+sound.Volume = 0.5
+sound.Parent = game.Workspace
+
+-- Play the sound
+sound:Play()
