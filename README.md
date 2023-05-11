@@ -14,4 +14,14 @@ Next, open `466Team1Com.rbxlx` in Roblox Studio and start the Rojo server:
 rojo serve
 ```
 
+
 For more help, check out [the Rojo documentation](https://rojo.space/docs).
+
+## Adding Users and Admins
+go into src/server/whitelist.txt and admins.txt
+
+For each line in whitelist.txt, there should be a Roblox
+UUID for each user you want to let into the game
+
+For each line in admin.txt, there should be a Roblox
+UUID for each user you want to give admin control to.
